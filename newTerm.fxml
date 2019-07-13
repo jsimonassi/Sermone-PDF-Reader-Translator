@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="736.0" prefWidth="1336.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.NewTermDialogueController">
+   <top>
+      <MenuBar id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu id="menu_arquivo" disable="true" mnemonicParsing="false" text="Arquivo" />
+          <Menu disable="true" mnemonicParsing="false" text="Editar" />
+          <Menu mnemonicParsing="false" text="Ajuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Ver ajuda" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <Text id="tx_termos" fx:id="tx_termos" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Termos">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font></Text>
+                  <TextField fx:id="tf_portugues" minWidth="200.0" promptText="Português" />
+                  <TextField fx:id="tf_ingles" promptText="Inglês" />
+                  <Button id="bt_addPronuncia" fx:id="bt_addPronuncia" minHeight="30.0" minWidth="130.0" mnemonicParsing="false" onAction="#adicionarPronuncia" text="Adicionar pronúncia" />
+                  <Button id="bt_voltar" fx:id="bt_voltar" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#voltarAoDicionario" prefHeight="80.0" prefWidth="80.0" />
+                  <Button id="bt_salvar" fx:id="bt_salvar" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#salvarNovoTermo" prefHeight="80.0" prefWidth="80.0" />
+               </children>
+               <padding>
+                  <Insets top="103.0" />
+               </padding>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <Text id="tx_significados" fx:id="tx_significados" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Significados">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font></Text>
+                  <TextArea id="ta_significadoPortugues" fx:id="ta_significadoPortugues" minWidth="500.0" prefHeight="200.0" prefWidth="200.0" promptText="Significado (português)" wrapText="true" />
+                  <TextArea id="ta_significadoIngles" fx:id="ta_significadoIngles" minWidth="500.0" prefHeight="200.0" prefWidth="200.0" promptText="Significado (inglês)" wrapText="true" />
+               </children>
+               <padding>
+                  <Insets top="32.0" />
+               </padding>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="25.0" top="25.0" />
+         </padding>
+      </HBox>
+   </center>
+</BorderPane>

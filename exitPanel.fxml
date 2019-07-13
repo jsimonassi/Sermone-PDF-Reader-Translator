@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="vBox" fx:id="vBox" spacing="15" alignment="CENTER" prefHeight="135.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.ExitPanelController">
+   <children>
+      <Text id="tx_messge" fx:id="label" text="Tem certeza disso?" />
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Button fx:id="sim" mnemonicParsing="false" prefWidth="90.0" text="Sim" onAction="#sim"/>
+            <Button fx:id="nao" mnemonicParsing="false" prefWidth="90.0" text="Não" onAction="#nao"/>
+         </children>
+      </HBox>
+   </children>
+</VBox>

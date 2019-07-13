@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.DictionaryController">
+   <top>
+      <MenuBar id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu id="menu_arquivo" disable="true" mnemonicParsing="false" text="Arquivo" />
+          <Menu mnemonicParsing="false" text="Editar">
+               <items>
+                  <Menu mnemonicParsing="false" text="Idioma dos significados">
+                    <items>
+                      <MenuItem fx:id="menuItem_Portugues" mnemonicParsing="false" onAction="#alternarLabel_Portugues" text="Português" />
+                        <MenuItem fx:id="menuItem_Ingles" mnemonicParsing="false" onAction="#alternarLabel_Ingles" text="Inglês" />
+                    </items>
+                  </Menu>
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ajuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Ver ajuda" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+               <children>
+                  <ChoiceBox id="cb_selecionarIdioma" fx:id="cb_selecionarIdioma" maxWidth="100.0" minWidth="150.0" prefWidth="100.0" onAction="#alternarList"/>
+                  <ListView id="lv_termos" fx:id="lv_termos" minHeight="300.0" minWidth="300.0" prefHeight="350.0" />
+                  <TextField id="tf_pesquisarTermo" fx:id="tf_pesquisarTermo" onAction="#pesquisarTermo" promptText="Procure por um termo" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button id="bt_adicionarTermo" fx:id="bt_adicionarTermo" minHeight="30.0" minWidth="130.0" mnemonicParsing="false" onAction="#adicionarTermo" text="Adicionar Novo" />
+                        <Button id="bt_editar" fx:id="bt_editar" minHeight="30.0" minWidth="130.0" mnemonicParsing="false" onAction="#editarTermo" text="Editar" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+               <children>
+                  <Label id="lb_significado" fx:id="lb_significado" minHeight="300.0" minWidth="500.0" prefHeight="350.0" prefWidth="500.0" alignment="TOP_LEFT" wrapText="true">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                      <padding>
+                          <Insets top="5.0" bottom="5.0" left="5.0" right="5.0"/>
+                      </padding>
+                  </Label>
+                  <Button id="bt_ouvirPronuncia" fx:id="bt_ouvirPronuncia" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#ouvirPronuncia" prefHeight="60.0" prefWidth="60.0">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+      </HBox>
+   </center>
+   <left>
+      <Button id="bt_voltar" fx:id="bt_voltar" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#voltar" prefHeight="80.0" prefWidth="80.0" BorderPane.alignment="CENTER_RIGHT">
+         <BorderPane.margin>
+            <Insets left="150.0" />
+         </BorderPane.margin>
+      </Button>
+   </left>
+</BorderPane>

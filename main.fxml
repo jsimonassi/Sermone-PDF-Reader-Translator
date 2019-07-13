@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="30.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.MainMenuController">
+   <children>
+      <Button id="bt_abrirPDF" fx:id="bt_abrirPDF" minHeight="160.0" minWidth="160.0" mnemonicParsing="false" onAction="#abrirPDF" prefHeight="160.0" prefWidth="160.0" />
+      <Button id="bt_abrirDicionario" fx:id="bt_abrirDicionario" minHeight="160.0" minWidth="160.0" mnemonicParsing="false" onAction="#abrirDicionario" prefHeight="160.0" prefWidth="160.0" />
+   </children>
+</HBox>
