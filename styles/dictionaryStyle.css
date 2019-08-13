@@ -1,0 +1,49 @@
+.root{
+    -fx-background-image: url("livropc.jpg");
+    -fx-background-size: cover;
+}
+
+/* Botões */
+
+.button{
+    -fx-background-color: #52a9eb;
+    -fx-background-radius: 100;
+    -fx-text-fill: white;
+    -fx-border-radius: 100;
+    -fx-border-width: 2;
+    -fx-transition: -fx-border-color .5s;
+}
+.button:hover{
+    -fx-border-color: white;
+}
+.button#bt_voltar{
+    -fx-background-color: transparent;
+    -fx-background-image: url("backwards_icon_red.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+.button#bt_voltar:hover{
+    -fx-border-color: black;
+}
+
+.button#bt_ouvirPronuncia{
+    -fx-background-image: url("speaker_icon_red.png");
+    -fx-background-size: cover;
+}
+
+.label#lb_significado{
+    -fx-background-color: #52a9eb;
+    -fx-text-fill: white;
+}
+
+.choice-box, .choice-box .menu-item {
+    -fx-background-color: #52a9eb;
+}
+.choice-box .label{
+    -fx-text-fill: white;
+}
+
+.list-view{
+    -fx-background-color: #52a9eb;
+    -fx-text-fill: white;
+}

@@ -1,0 +1,47 @@
+.root{
+    -fx-background-image: url("mainmenu.jpg");
+    -fx-background-size: cover;
+    -fx-text-fill: white;
+}
+
+.label{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 20;
+}
+
+.button{
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+}
+
+.button#bt_abrirPDF{
+    -fx-background-image: url("open_book_icon_red.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.button#bt_abrirDicionario{
+    -fx-background-image: url("dictionary_icon_red.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+.root{
+    -fx-background-image: url("books.jpg");
+    -fx-background-size: cover;
+}
+
+/* Botões */
+
+.button#bt_traduzir{
+    -fx-background-image: url("arrow_red.png");
+    -fx-background-radius: 0;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-border-radius: 0;
+}
+
+.button#bt_reproduzirPronuncia{
+    -fx-background-image: url("speaker_red.png");
+    -fx-background-size: cover;
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+    -fx-border: 2;
+}
+.button#bt_reproduzirPronuncia:hover{
+    -fx-border-color: white;
+}
+.button#bt_reproduzirLeitura{
+    -fx-background-image: url("open_book_icon_red2.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-radius: 100;
+    -fx-border-radius: 100;
+    -fx-border: 2;
+}
+.button#bt_reproduzirLeitura:hover{
+    -fx-border-color: white;
+}
+
+/* Text Field */
+
+.text-field{
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+/* Labels */
+
+.menu .label, .choice-box .label{
+    -fx-text-fill: black;
+    -fx-font-weight: normal;
+    -fx-font-size: 12;
+}
+
+.label{
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+/* Choice Box */
+
+.choice-box{
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
