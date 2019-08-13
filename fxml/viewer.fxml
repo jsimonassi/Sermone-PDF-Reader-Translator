@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="classes.ViewerController">
+   <top>
+      <MenuBar id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu id="menu_arquivo" mnemonicParsing="false" text="Arquivo">
+            <items>
+                  <MenuItem id="menuItem_abrir" fx:id="menuItem_abrir" mnemonicParsing="false" onAction="#iniciar" text="Abrir novo" />
+              <MenuItem id="menuItem_fechar" fx:id="menuItem_fechar" mnemonicParsing="false" onAction="#fecharArquivo" text="Fechar documento" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+               <items>
+                  <MenuItem fx:id="menuItem_verDicionario" mnemonicParsing="false" onAction="#verDicionario" text="Ver dicionário" />
+                  <Menu mnemonicParsing="false" text="Idioma dos significados">
+                    <items>
+                      <MenuItem fx:id="menuItem_Portugues" mnemonicParsing="false" onAction="#alternar_Portugues" text="Português" />
+                        <MenuItem fx:id="menuItem_Ingles" mnemonicParsing="false" onAction="#alternar_Ingles" text="Inglês" />
+                    </items>
+                  </Menu>
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ajuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Ver ajuda" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <VBox id="vBox_lateral" fx:id="vBox_lateral" prefHeight="375.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <TextField id="tf_termoAtraduzir" fx:id="tf_termoAtraduzir" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#traduzir" prefHeight="30.0" prefWidth="200.0" promptText="Digite o termo a traduzir" />
+                  <Button id="bt_traduzir" fx:id="bt_traduzir" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#traduzir" prefHeight="30.0" prefWidth="30.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <Label text="Tradução" id="lb_titulo1">
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding></Label>
+            <Label id="lb_traducao" fx:id="lb_traducao" minHeight="30.0" prefHeight="30.0" prefWidth="250.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <HBox minWidth="-Infinity" prefWidth="200.0">
+               <children>
+                  <Label id="lb_titulo2" minHeight="-Infinity" minWidth="-Infinity" prefWidth="220.0" text="Significado">
+                     <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox id="cb_idioma" fx:id="cb_idioma" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="25.0" onAction="#alternarIdioma"/>
+               </children>
+            </HBox>
+            <Label id="lb_significado" fx:id="lb_significado" minHeight="360.0" minWidth="250.0" prefHeight="360.0" prefWidth="250.0" wrapText="true" alignment="TOP_LEFT" >
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Button id="bt_reproduzirPronuncia" fx:id="bt_reproduzirPronuncia" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#reproduzirPronuncia" prefHeight="40.0" prefWidth="40.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Separator>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+               <children>
+                  <Button id="bt_reproduzirLeitura" fx:id="bt_reproduzirLeitura" mnemonicParsing="false" onAction="#reproduzirLeitura" prefHeight="60.0" prefWidth="60.0" />
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label minWidth="40.0" text="Início" />
+                              <TextField id="tf_inicioLeitura" fx:id="tf_inicioLeitura" promptText="Pág" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="5.0">
+                           <children>
+                              <Label minWidth="40.0" text="Fim" />
+                              <TextField id="tf_fimLeitura" fx:id="tf_fimLeitura" promptText="Pág" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <WebView id="webView" fx:id="webView" />
+   </center>
+</BorderPane>

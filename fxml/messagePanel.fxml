@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="classes.MessagePanelController"
+      prefHeight="135.0" prefWidth="300.0"
+      alignment="CENTER"
+      spacing="15">
+    <Text fx:id="tx_mensagem"/>
+    <Button text="OK" prefWidth="90" onAction="#close" fx:id="bt_ok"/>
+</VBox>
